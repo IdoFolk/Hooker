@@ -75,6 +75,7 @@ public class Grappler : MonoBehaviour
 
     public void TryGrapple()
     {
+        if (_isCharging) return;
         RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right, grappleDistance,GrappableLayerMask);
         if (hit.collider != null) StartCoroutine(EnableGrapple(hit));
     }
@@ -84,18 +85,18 @@ public class Grappler : MonoBehaviour
         hook.LaunchHook(hit.point);
         GrappleVFX(true);
         yield return new WaitUntil(() => hook.IsGrappled);
-        distanceJoint2D.connectedAnchor = hit.point;
-        var distance = Vector3.Distance(transform.position, hit.point);
+        distanceJoint2D.enabled = true;
+        distanceJoint2D.connectedAnchor = hook.GrappleTargetPoint;
+        var distance = Vector3.Distance(transform.position, hook.GrappleTargetPoint);
         if (distance < grapplePullDistance) distanceJoint2D.distance = distance;
         else distanceJoint2D.distance = grapplePullDistance;
-        distanceJoint2D.enabled = true;
     }
 
     public void DisableGrapple()
     {
-        distanceJoint2D.enabled = false;
         hook.ReturnHook(firePoint.position);
         GrappleVFX(false);
+        distanceJoint2D.enabled = false;
     }
 
     private void GrappleVFX(bool state)
