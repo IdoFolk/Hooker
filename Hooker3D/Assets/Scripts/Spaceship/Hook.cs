@@ -27,11 +27,11 @@ public class Hook : MonoBehaviour
         _grappler ??= GetComponentInParent<Grappler>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (_hookLaunched)
         {
-            _animationTime += Time.fixedDeltaTime * hookSpeed;
+            _animationTime += Time.deltaTime * hookSpeed;
             float xPos = Mathf.Lerp(_grappleSelfPoint.x, _grappleTargetPoint.x, animationCurve.Evaluate(_animationTime));
             float yPos = Mathf.Lerp(_grappleSelfPoint.y, _grappleTargetPoint.y, animationCurve.Evaluate(_animationTime));
             transform.position = new Vector3(xPos, yPos, 0);
