@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 317291121}
   - component: {fileID: 317291120}
   - component: {fileID: 317291123}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,7 +567,7 @@ GameObject:
   - component: {fileID: 681088528}
   - component: {fileID: 681088527}
   - component: {fileID: 681088530}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -702,8 +702,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f73092feb732404390254f60dbbce29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _overridePlayerStartingPos: 1
-  _startingCheckPoint: {fileID: 789136255}
+  _overridePlayerStartingPos: 0
+  _startingCheckPoint: {fileID: 1227264739}
   _player: {fileID: 490239459}
 --- !u!1 &760241311
 GameObject:
@@ -717,7 +717,7 @@ GameObject:
   - component: {fileID: 760241314}
   - component: {fileID: 760241313}
   - component: {fileID: 760241316}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -834,18 +834,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &789136255 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1792476195174171369, guid: 87ff537ab0657f542b87861da7923dad,
-    type: 3}
-  m_PrefabInstance: {fileID: 7847053140845552307}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e091a5485c7a80746bfd2b896c1fc900, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,7 +892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 843314892}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Area 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -939,7 +927,7 @@ GameObject:
   - component: {fileID: 858732284}
   - component: {fileID: 858732283}
   - component: {fileID: 858732286}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Platform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1174,7 +1162,7 @@ GameObject:
   - component: {fileID: 1065725713}
   - component: {fileID: 1065725712}
   - component: {fileID: 1065725711}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Win
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1297,6 +1285,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3959036762990764574}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1227264739 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4992290582071300412, guid: 716c95315264afa41a14ca05cf888ba2,
+    type: 3}
+  m_PrefabInstance: {fileID: 5669534040975973611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e091a5485c7a80746bfd2b896c1fc900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1245303838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1383,7 +1383,7 @@ GameObject:
   - component: {fileID: 1285222913}
   - component: {fileID: 1285222912}
   - component: {fileID: 1285222911}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Platform (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1512,7 +1512,7 @@ GameObject:
   - component: {fileID: 1291374533}
   - component: {fileID: 1291374532}
   - component: {fileID: 1291374531}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Platform (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1644,7 +1644,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1601925253}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}

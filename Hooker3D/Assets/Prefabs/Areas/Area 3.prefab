@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2194021374168920151}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Area 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,6 +118,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2194021374168920151}
     m_Modifications:
+    - target: {fileID: 232096823963878798, guid: de36e3c35852c8443b15229f0ef16fdc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4407860113865941256, guid: de36e3c35852c8443b15229f0ef16fdc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -173,6 +178,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spikes (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8719263466630586421, guid: de36e3c35852c8443b15229f0ef16fdc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -192,6 +202,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2194021374168920151}
     m_Modifications:
+    - target: {fileID: 232096823963878798, guid: de36e3c35852c8443b15229f0ef16fdc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4407860113865941256, guid: de36e3c35852c8443b15229f0ef16fdc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -247,6 +262,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spikes
       objectReference: {fileID: 0}
+    - target: {fileID: 8719263466630586421, guid: de36e3c35852c8443b15229f0ef16fdc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -266,6 +286,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2194021374168920151}
     m_Modifications:
+    - target: {fileID: 232096823963878798, guid: de36e3c35852c8443b15229f0ef16fdc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4407860113865941256, guid: de36e3c35852c8443b15229f0ef16fdc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -321,6 +346,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spikes (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8719263466630586421, guid: de36e3c35852c8443b15229f0ef16fdc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -340,6 +370,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2194021374168920151}
     m_Modifications:
+    - target: {fileID: 232096823963878798, guid: de36e3c35852c8443b15229f0ef16fdc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4407860113865941256, guid: de36e3c35852c8443b15229f0ef16fdc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -394,6 +429,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spikes (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8719263466630586421, guid: de36e3c35852c8443b15229f0ef16fdc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
