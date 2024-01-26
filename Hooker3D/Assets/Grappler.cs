@@ -32,10 +32,12 @@ public class Grappler : MonoBehaviour
     private float _chargePercent;
     private static readonly int BlueIntensity = Shader.PropertyToID("_Blue_Intensity");
     private static readonly int OrangeIntensity = Shader.PropertyToID("_Orange_Intensity");
+    private static int GrappableLayerMask;
 
     private void Start()
     {
         distanceJoint2D.enabled = false;
+        GrappableLayerMask = LayerMask.GetMask("Grappable");
     }
 
     public void Init(int id)
@@ -73,7 +75,7 @@ public class Grappler : MonoBehaviour
 
     public void TryGrapple()
     {
-        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right, grappleDistance);
+        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right, grappleDistance,GrappableLayerMask);
         if (hit.collider != null) StartCoroutine(EnableGrapple(hit));
     }
 
