@@ -17,17 +17,19 @@ public class Hook : MonoBehaviour
     private Grappler _grappler;
     public bool IsGrappled => _isGrappled;
 
+    public bool HookLaunched => _hookLaunched;
+
     private void Start()
     {
         lineRenderer.enabled = false;
         _grappler ??= GetComponentInParent<Grappler>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (_hookLaunched)
         {
-            _animationTime += Time.deltaTime * hookSpeed;
+            _animationTime += Time.fixedDeltaTime * hookSpeed;
             float xPos = Mathf.Lerp(_grappleSelfPoint.x, _grappleTargetPoint.x, animationCurve.Evaluate(_animationTime));
             float yPos = Mathf.Lerp(_grappleSelfPoint.y, _grappleTargetPoint.y, animationCurve.Evaluate(_animationTime));
             transform.position = new Vector3(xPos, yPos, 0);
@@ -50,6 +52,8 @@ public class Hook : MonoBehaviour
         _grappleSelfPoint = transform.position;
         _hookLaunched = true;
         lineRenderer.enabled = true;
+        lineRenderer.SetPosition(0, _grappler.FirePoint.position);
+        lineRenderer.SetPosition(1, transform.position);
     }
 
     public void ReturnHook(Vector3 returnPoint)
