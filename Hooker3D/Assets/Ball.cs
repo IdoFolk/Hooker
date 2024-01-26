@@ -9,20 +9,20 @@ public class Ball : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Joystick1Button11) || Input.GetMouseButtonDown(0))
         {
             player1GrappleGun.TryGrapple();
         }
-        else if (Input.GetMouseButtonUp(0))
+        else if (Input.GetKeyUp(KeyCode.Joystick1Button11)|| Input.GetMouseButtonUp(0))
         {
             player1GrappleGun.DisableGrapple();
         }
         
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetKeyDown(KeyCode.Joystick1Button9)|| Input.GetMouseButtonDown(1))
         {
             player2GrappleGun.TryGrapple();
         }
-        else if (Input.GetMouseButtonUp(1))
+        else if (Input.GetKeyUp(KeyCode.Joystick1Button9)|| Input.GetMouseButtonUp(1))
         {
             player2GrappleGun.DisableGrapple();
         }
