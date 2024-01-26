@@ -17,6 +17,8 @@ public class Hook : MonoBehaviour
     private Grappler _grappler;
     public bool IsGrappled => _isGrappled;
 
+    public Vector3 GrappleTargetPoint => _grappleTargetPoint;
+
     public bool HookLaunched => _hookLaunched;
 
     private void Start()
