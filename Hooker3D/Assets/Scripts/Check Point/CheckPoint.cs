@@ -24,7 +24,17 @@ public class CheckPoint : MonoBehaviour
         if (collision != null)
         {
             _lastcheckPoint = this;
-            Debug.Log("Spawn Point is set to" + this.transform.parent.name);
+            var spaceship = collision.gameObject.GetComponent<Spaceship>();
+            if (spaceship)
+            {
+                var spaceshipParticles = spaceship.BallCheckpointParticles;
+                if (spaceshipParticles)
+                {
+                    spaceshipParticles.Play();
+                }
+            }
+
+            //Debug.Log("Spawn Point is set to" + this.transform.parent.name);
             foreach (var particle in _activateParticles)
             {
                 particle.Play();
