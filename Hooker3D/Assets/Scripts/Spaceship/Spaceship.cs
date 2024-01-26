@@ -59,13 +59,13 @@ public class Spaceship : MonoBehaviour
         }
         else
         {
-            if (!player1GrappleGun.IsCharging && !_shootPressedPlayer1)
+            if (!player1GrappleGun.IsCharging && !player1GrappleGun.IsGrappled && !_shootPressedPlayer1)
             {
-                if (Input.GetAxis("Player1Shoot") == 1)
-                {
-                    _shootPressedPlayer1 = true;
-                    player1GrappleGun.ChargeShot();
-                }
+                    if (Input.GetAxis("Player1Shoot") == 1)
+                    {
+                        _shootPressedPlayer1 = true;
+                        player1GrappleGun.ChargeShot();
+                    } 
             }
             else if (_shootPressedPlayer1)
             {
@@ -76,13 +76,13 @@ public class Spaceship : MonoBehaviour
                 }
             }
             
-            if (!player2GrappleGun.IsCharging&& !_shootPressedPlayer2)
+            if (!player2GrappleGun.IsCharging && !player2GrappleGun.IsGrappled && !_shootPressedPlayer2)
             {
-                if (Input.GetAxis("Player2Shoot") == 1)
-                {
-                    _shootPressedPlayer2 = true;
-                    player2GrappleGun.ChargeShot();
-                }
+                    if (Input.GetAxis("Player2Shoot") == 1)
+                    {
+                        _shootPressedPlayer2 = true;
+                        player2GrappleGun.ChargeShot();
+                    }
             }
             else if (_shootPressedPlayer2)
             {

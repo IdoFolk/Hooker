@@ -75,6 +75,7 @@ public class Grappler : MonoBehaviour
 
     public void TryGrapple()
     {
+        if (_isCharging) return;
         RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right, grappleDistance,GrappableLayerMask);
         if (hit.collider != null) StartCoroutine(EnableGrapple(hit));
     }
