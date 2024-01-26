@@ -11,6 +11,7 @@ public class CheckPoint : MonoBehaviour
         if (collision != null)
         {
             _lastcheckPoint = this;
+            Debug.Log("Spawn Point is set to" + this.transform.parent.name);
         }
     }
     public static void SpawnAtLastSpawnPoint(GameObject ball)
