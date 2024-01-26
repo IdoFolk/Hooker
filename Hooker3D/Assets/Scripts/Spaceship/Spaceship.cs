@@ -10,7 +10,7 @@ public class Spaceship : MonoBehaviour
     [SerializeField] private Rigidbody2D _rigidbody2D;
     [SerializeField] private bool useXboxControllers;
     [SerializeField] private float angularDrag;
-
+    [SerializeField] public ParticleSystem BallCheckpointParticles;
 
     private bool _grapplePressedPlayer1;
     private bool _grapplePressedPlayer2;
