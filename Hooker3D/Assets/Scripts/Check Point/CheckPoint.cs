@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
@@ -5,11 +6,18 @@ public class CheckPoint : MonoBehaviour
     static CheckPoint _lastcheckPoint;
     public Transform SpawnPoint;
     [SerializeField] private GameObject _wall;
-    [SerializeField] private GameObject _activateParticles;
-    [SerializeField] private GameObject _idleParticles;
+    [SerializeField] private List<ParticleSystem> _activateParticles;
+    [SerializeField] private List<ParticleSystem> _idleParticles;
     private void Start()
     {
-        _idleParticles.SetActive(true);
+        foreach (var particle in _idleParticles)
+        {
+            particle.Play();
+        }
+        foreach (var particle in _activateParticles)
+        {
+            particle.Stop();
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,8 +25,14 @@ public class CheckPoint : MonoBehaviour
         {
             _lastcheckPoint = this;
             Debug.Log("Spawn Point is set to" + this.transform.parent.name);
-            _activateParticles.SetActive(true);
-            _idleParticles.SetActive(false);
+            foreach (var particle in _activateParticles)
+            {
+                particle.Play();
+            }
+            foreach (var particle in _idleParticles)
+            {
+                particle.Stop();
+            }
             _wall.SetActive(true);
         }
     }
