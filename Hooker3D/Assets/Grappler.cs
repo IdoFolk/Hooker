@@ -5,37 +5,89 @@ using UnityEngine;
 
 public class Grappler : MonoBehaviour
 {
+    public bool IsGrappled => hook.IsGrappled;
+    public Transform FirePoint => firePoint;
+    public bool IsCharging => _isCharging;
+    
     [SerializeField] private Rigidbody2D rigidBody;
     [SerializeField] private DistanceJoint2D distanceJoint2D;
     [SerializeField] private Transform firePoint;
     [SerializeField] private Hook hook;
+    [Header("VFX")]
+    [SerializeField] private ParticleSystem pulseCannonVFX;
+    [SerializeField] private ParticleSystem grappleGunVFX;
+    [SerializeField] private MeshRenderer spaceshipMesh;
+    [Header("Grapple Gun")]
     [SerializeField] private float grappleDistance;
     [SerializeField] private float grapplePullDistance;
-    [SerializeField] private float angularForce;
     [SerializeField] private float grappleTime;
-    public Transform FirePoint => firePoint;
+    [Header("Pulse Cannon")]
+    [SerializeField] private float chargingSpeed;
+    [SerializeField] private float pulsePower;
+    
+    private bool _isCharging;
+    private int _id;
 
+
+    private float _chargePercent;
+    private static readonly int BlueIntensity = Shader.PropertyToID("_Blue_Intensity");
+    private static readonly int OrangeIntensity = Shader.PropertyToID("_Orange_Intensity");
+    private static int GrappableLayerMask;
 
     private void Start()
     {
         distanceJoint2D.enabled = false;
+        GrappableLayerMask = LayerMask.GetMask("Grappable");
     }
 
-    
+    public void Init(int id)
+    {
+        _id = id;
+    }
+
+    private void FixedUpdate()
+    {
+        if (_isCharging)
+        {
+            if (_chargePercent >= 1) return;
+            _chargePercent += Time.fixedDeltaTime * chargingSpeed;
+            if(_id == 0) spaceshipMesh.material.SetFloat(BlueIntensity,_chargePercent);
+            else if(_id == 1) spaceshipMesh.material.SetFloat(OrangeIntensity,_chargePercent);
+        }
+    }
+
+    public void ChargeShot()
+    {
+        if (hook.HookLaunched) return;
+        _isCharging = true;
+    }
+    public void ReleaseShot()
+    {
+        if (hook.HookLaunched) return;
+        _isCharging = false;
+        var direction = (Vector3)rigidBody.position - firePoint.position;
+        rigidBody.AddForce(direction*pulsePower*_chargePercent,ForceMode2D.Impulse);
+        pulseCannonVFX.Play();
+        _chargePercent = 0;
+        if(_id == 0) spaceshipMesh.material.SetFloat(BlueIntensity,_chargePercent);
+        else if(_id == 1) spaceshipMesh.material.SetFloat(OrangeIntensity,_chargePercent);
+    }
 
     public void TryGrapple()
     {
-        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right, grappleDistance);
+        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right, grappleDistance,GrappableLayerMask);
         if (hit.collider != null) StartCoroutine(EnableGrapple(hit));
     }
 
     public IEnumerator EnableGrapple(RaycastHit2D hit)
     {
         hook.LaunchHook(hit.point);
+        GrappleVFX(true);
         yield return new WaitUntil(() => hook.IsGrappled);
         distanceJoint2D.connectedAnchor = hit.point;
-        distanceJoint2D.distance = grapplePullDistance;
-        rigidBody.angularDrag = angularForce;
+        var distance = Vector3.Distance(transform.position, hit.point);
+        if (distance < grapplePullDistance) distanceJoint2D.distance = distance;
+        else distanceJoint2D.distance = grapplePullDistance;
         distanceJoint2D.enabled = true;
     }
 
@@ -43,8 +95,23 @@ public class Grappler : MonoBehaviour
     {
         distanceJoint2D.enabled = false;
         hook.ReturnHook(firePoint.position);
+        GrappleVFX(false);
     }
 
+    private void GrappleVFX(bool state)
+    {
+        if (state)
+        {
+            grappleGunVFX.Play();
+            if(_id == 0) spaceshipMesh.material.SetFloat(BlueIntensity,1);
+            else if(_id == 1) spaceshipMesh.material.SetFloat(OrangeIntensity,1);
+        }
+        else
+        {
+            if(_id == 0) spaceshipMesh.material.SetFloat(BlueIntensity,0);
+            else if(_id == 1) spaceshipMesh.material.SetFloat(OrangeIntensity,0);
+        }
+    }
     private void OnDrawGizmos()
     {
         if (!Application.isPlaying)

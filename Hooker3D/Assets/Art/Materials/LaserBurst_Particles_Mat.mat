@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Burst_Particles_Material
-  m_Shader: {fileID: -6465566751694194690, guid: 1c3428f69b54db44fa2821a3abd4e396,
+  m_Name: LaserBurst_Particles_Mat
+  m_Shader: {fileID: -6465566751694194690, guid: 3114f8403de3e2940bc75a0c217127ca,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -42,7 +42,7 @@ Material:
     - _QueueOffset: 0
     m_Colors: []
   m_BuildTextureStacks: []
---- !u!114 &2160724581883759098
+--- !u!114 &3352036904797030268
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
