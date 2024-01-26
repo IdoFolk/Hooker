@@ -93,7 +93,7 @@ MonoBehaviour:
   _isPushed: 0
   pointA: {fileID: 2909729475406030329}
   pointB: {fileID: 1474010882151359180}
-  _directionMultiplier: 20
+  _directionMultiplier: 1.5
 --- !u!1 &4903176643372282745
 GameObject:
   m_ObjectHideFlags: 0

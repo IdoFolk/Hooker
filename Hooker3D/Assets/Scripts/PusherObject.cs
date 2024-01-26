@@ -41,7 +41,7 @@ public class PusherObject : MonoBehaviour
     {
         if (_isPushed)
         {
-            _ballRB.AddForce(_direction * _directionMultiplier);
+            _ballRB.AddForce(_direction * _directionMultiplier,ForceMode2D.Impulse);
         }
     }
 }
