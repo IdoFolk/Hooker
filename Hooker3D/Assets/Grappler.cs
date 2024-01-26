@@ -32,10 +32,12 @@ public class Grappler : MonoBehaviour
     private float _chargePercent;
     private static readonly int BlueIntensity = Shader.PropertyToID("_Blue_Intensity");
     private static readonly int OrangeIntensity = Shader.PropertyToID("_Orange_Intensity");
+    private static int GrappableLayerMask;
 
     private void Start()
     {
         distanceJoint2D.enabled = false;
+        GrappableLayerMask = LayerMask.GetMask("Grappable");
     }
 
     public void Init(int id)
@@ -73,14 +75,14 @@ public class Grappler : MonoBehaviour
 
     public void TryGrapple()
     {
-        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right, grappleDistance);
+        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right, grappleDistance,GrappableLayerMask);
         if (hit.collider != null) StartCoroutine(EnableGrapple(hit));
     }
 
     public IEnumerator EnableGrapple(RaycastHit2D hit)
     {
         hook.LaunchHook(hit.point);
-        grappleGunVFX.Play();
+        GrappleVFX(true);
         yield return new WaitUntil(() => hook.IsGrappled);
         distanceJoint2D.connectedAnchor = hit.point;
         var distance = Vector3.Distance(transform.position, hit.point);
@@ -93,8 +95,23 @@ public class Grappler : MonoBehaviour
     {
         distanceJoint2D.enabled = false;
         hook.ReturnHook(firePoint.position);
+        GrappleVFX(false);
     }
 
+    private void GrappleVFX(bool state)
+    {
+        if (state)
+        {
+            grappleGunVFX.Play();
+            if(_id == 0) spaceshipMesh.material.SetFloat(BlueIntensity,1);
+            else if(_id == 1) spaceshipMesh.material.SetFloat(OrangeIntensity,1);
+        }
+        else
+        {
+            if(_id == 0) spaceshipMesh.material.SetFloat(BlueIntensity,0);
+            else if(_id == 1) spaceshipMesh.material.SetFloat(OrangeIntensity,0);
+        }
+    }
     private void OnDrawGizmos()
     {
         if (!Application.isPlaying)
