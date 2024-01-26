@@ -5,16 +5,15 @@ using UnityEngine;
 
 public class Grappler : MonoBehaviour
 {
-    [SerializeField] private Camera mainCamera;
     [SerializeField] private Rigidbody2D rigidBody;
     [SerializeField] private DistanceJoint2D distanceJoint2D;
     [SerializeField] private Transform firePoint;
-    [SerializeField] private LineRenderer lineRenderer;
+    [SerializeField] private Hook hook;
     [SerializeField] private float grappleDistance;
-    [SerializeField] private Player player;
-    [SerializeField, Range(0,1)] private float grapplePullDistanceRatio;
+    [SerializeField] private float grapplePullDistance;
     [SerializeField] private float angularForce;
-    
+    [SerializeField] private float grappleTime;
+    public Transform FirePoint => firePoint;
 
 
     private void Start()
@@ -22,63 +21,35 @@ public class Grappler : MonoBehaviour
         distanceJoint2D.enabled = false;
     }
 
-    private void Update()
+    
+
+    public void TryGrapple()
     {
-        int inputKey = 0;
-        switch (player)
-        {
-            case Player.Player1:
-                inputKey = 0;
-                break;
-            case Player.Player2:
-                inputKey = 1;
-                break;
-        }
-        if (Input.GetMouseButtonDown(inputKey))
-        {
-            Grapple();
-        }
-        else if (Input.GetMouseButtonUp(inputKey))
-        {
-            distanceJoint2D.enabled = false;
-            lineRenderer.enabled = false;
-        }
-
-        if (distanceJoint2D.enabled)
-        {
-            lineRenderer.SetPosition(1,transform.position);
-        }
-
-       
+        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right, grappleDistance);
+        if (hit.collider != null) StartCoroutine(EnableGrapple(hit));
     }
 
-    private void Grapple()
+    public IEnumerator EnableGrapple(RaycastHit2D hit)
     {
-        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right,grappleDistance);
-        if (hit.collider != null)
-        {
-            lineRenderer.SetPosition(0, hit.point);
-            lineRenderer.SetPosition(1, transform.position);
-            distanceJoint2D.connectedAnchor = hit.point;
-            distanceJoint2D.distance = Vector3.Distance(hit.point, transform.position) * grapplePullDistanceRatio;
-            rigidBody.angularDrag = angularForce;
-            distanceJoint2D.enabled = true;
-            lineRenderer.enabled = true;
-        }
+        hook.LaunchHook(hit.point);
+        yield return new WaitUntil(() => hook.IsGrappled);
+        distanceJoint2D.connectedAnchor = hit.point;
+        distanceJoint2D.distance = grapplePullDistance;
+        rigidBody.angularDrag = angularForce;
+        distanceJoint2D.enabled = true;
+    }
+
+    public void DisableGrapple()
+    {
+        distanceJoint2D.enabled = false;
+        hook.ReturnHook(firePoint.position);
     }
 
     private void OnDrawGizmos()
     {
         if (!Application.isPlaying)
         {
-            Gizmos.DrawWireSphere(transform.position,grappleDistance);
+            Gizmos.DrawWireSphere(transform.position, grappleDistance);
         }
-        
     }
-}
-
-public enum Player
-{
-    Player1,
-    Player2
 }
