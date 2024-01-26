@@ -30,8 +30,8 @@ public class Grappler : MonoBehaviour
 
 
     private float _chargePercent;
-    private static readonly int BlueIntensity = Shader.PropertyToID("Blue_Intensity");
-    private static readonly int OrangeIntensity = Shader.PropertyToID("Orange_Intensity");
+    private static readonly int BlueIntensity = Shader.PropertyToID("_Blue_Intensity");
+    private static readonly int OrangeIntensity = Shader.PropertyToID("_Orange_Intensity");
 
     private void Start()
     {
