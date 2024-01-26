@@ -80,7 +80,7 @@ public class Grappler : MonoBehaviour
     public IEnumerator EnableGrapple(RaycastHit2D hit)
     {
         hook.LaunchHook(hit.point);
-        grappleGunVFX.Play();
+        GrappleVFX(true);
         yield return new WaitUntil(() => hook.IsGrappled);
         distanceJoint2D.connectedAnchor = hit.point;
         var distance = Vector3.Distance(transform.position, hit.point);
@@ -93,8 +93,23 @@ public class Grappler : MonoBehaviour
     {
         distanceJoint2D.enabled = false;
         hook.ReturnHook(firePoint.position);
+        GrappleVFX(false);
     }
 
+    private void GrappleVFX(bool state)
+    {
+        if (state)
+        {
+            grappleGunVFX.Play();
+            if(_id == 0) spaceshipMesh.material.SetFloat(BlueIntensity,1);
+            else if(_id == 1) spaceshipMesh.material.SetFloat(OrangeIntensity,1);
+        }
+        else
+        {
+            if(_id == 0) spaceshipMesh.material.SetFloat(BlueIntensity,0);
+            else if(_id == 1) spaceshipMesh.material.SetFloat(OrangeIntensity,0);
+        }
+    }
     private void OnDrawGizmos()
     {
         if (!Application.isPlaying)
