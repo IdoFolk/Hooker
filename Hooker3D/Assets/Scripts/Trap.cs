@@ -7,6 +7,7 @@ public class Trap : MonoBehaviour
         if (collision != null)
         {
             CheckPoint.SpawnAtLastSpawnPoint(collision.gameObject);
+            collision.gameObject.GetComponent<Rigidbody2D>().totalForce = Vector2.zero;
         }
     }
 }

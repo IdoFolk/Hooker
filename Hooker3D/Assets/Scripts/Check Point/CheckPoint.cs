@@ -14,6 +14,10 @@ public class CheckPoint : MonoBehaviour
             Debug.Log("Spawn Point is set to" + this.transform.parent.name);
         }
     }
+    public void OverridePlayerCheckpoint(CheckPoint checkPoint)
+    {
+        _lastcheckPoint = checkPoint;
+    }
     public static void SpawnAtLastSpawnPoint(GameObject ball)
     {
         ball.transform.position = _lastcheckPoint.SpawnPoint.position;
