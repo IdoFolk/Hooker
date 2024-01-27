@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Spaceship : MonoBehaviour
 {
@@ -17,8 +18,8 @@ public class Spaceship : MonoBehaviour
     private bool _shootPressedPlayer1;
     private bool _shootPressedPlayer2;
 
-    public Grappler Player1GrappleGun { get => player1GrappleGun;}
-    public Grappler Player2GrappleGun { get => player2GrappleGun;}
+    public Grappler Player1GrappleGun => player1GrappleGun;
+    public Grappler Player2GrappleGun => player2GrappleGun;
 
     private void OnValidate()
     {
@@ -34,8 +35,36 @@ public class Spaceship : MonoBehaviour
 
     private void Update()
     {
-        GrappleInput();
-        CannonInput();
+        
+        //GrappleInput();
+        //CannonInput();
+    }
+
+    public void OnGrapple(int playerIndex, bool pressed)
+    {
+        if (pressed)
+        {
+            if(playerIndex == 0) player1GrappleGun.TryGrapple();
+            else if(playerIndex == 1) player2GrappleGun.TryGrapple();
+        }
+        else
+        {
+            if(playerIndex == 0) player1GrappleGun.DisableGrapple();
+            else if(playerIndex == 1) player2GrappleGun.DisableGrapple();
+        }
+    }
+    public void OnShoot(int playerIndex, bool pressed)
+    {
+        if (pressed)
+        {
+            if(playerIndex == 0) player1GrappleGun.ChargeShot();
+            else if(playerIndex == 1) player2GrappleGun.ChargeShot();
+        }
+        else
+        {
+            if(playerIndex == 0) player1GrappleGun.ReleaseShot();
+            else if(playerIndex == 1) player2GrappleGun.ReleaseShot();
+        }
     }
 
     private void CannonInput()
@@ -122,7 +151,6 @@ public class Spaceship : MonoBehaviour
         }
         else
         {
-            Debug.Log(Input.GetAxis("Player1Grapple"));
             if (!player1GrappleGun.IsGrappled && !_grapplePressedPlayer1)
             {
                 if (Input.GetAxis("Player1Grapple") == 1)
