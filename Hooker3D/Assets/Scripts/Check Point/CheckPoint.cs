@@ -66,7 +66,7 @@ public class CheckPoint : MonoBehaviour
         spaceship.Player2GrappleGun.DisableGrapple();
         _lastcheckPoint._hasBeenActivated = false;
         var rigidbody2D = ball.GetComponent<Rigidbody2D>();
-        Debug.Log("Poof");
+        //Debug.Log("Poof");
         rigidbody2D.AddForce(new Vector2(-20f,0),ForceMode2D.Impulse);
         //ball.GetComponent<Rigidbody2D>().angularVelocity = 0;
     }
