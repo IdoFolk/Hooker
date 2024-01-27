@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f73092feb732404390254f60dbbce29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _overridePlayerStartingPos: 1
+  _overridePlayerStartingPos: 0
   _startingCheckPoint: {fileID: 4173643472656343381}
   _player: {fileID: 490239459}
 --- !u!4 &738942453 stripped
