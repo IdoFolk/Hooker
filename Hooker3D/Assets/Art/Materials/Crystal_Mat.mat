@@ -57,7 +57,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: -1
     - _ReceiveShadows: 0
-    - _Roughness: 1
+    - _Roughness: 0.09
     - _SrcBlend: 1
     - _Surface: 1
     - _Tile: 0.7
