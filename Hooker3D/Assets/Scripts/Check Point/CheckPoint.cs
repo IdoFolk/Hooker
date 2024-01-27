@@ -59,6 +59,9 @@ public class CheckPoint : MonoBehaviour
     public static void SpawnAtLastSpawnPoint(GameObject ball)
     {
         ball.transform.position = _lastcheckPoint.SpawnPoint.position;
+        var spaceship = ball.GetComponent<Spaceship>();
+        spaceship.Player1GrappleGun.DisableGrapple();
+        spaceship.Player2GrappleGun.DisableGrapple();
         _lastcheckPoint._hasBeenActivated = false;
     }
 }
