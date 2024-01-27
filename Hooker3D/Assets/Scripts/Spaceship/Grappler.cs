@@ -24,7 +24,7 @@ public class Grappler : MonoBehaviour
     [SerializeField] private MeshRenderer spaceshipMesh;
     [Header("SFX")] 
     [SerializeField] private AudioClip pulseCannonBurstSfx;
-    [SerializeField] private AudioClip pulseCannonChargeSfx;
+    [SerializeField] private AudioClip grappleGunFireSfx;
     [Header("Grapple Gun")]
     [SerializeField] private float grappleDistance;
     [SerializeField] private float grapplePullDistance;
@@ -46,6 +46,11 @@ public class Grappler : MonoBehaviour
     {
         distanceJoint2D.enabled = false;
         GrappableLayerMask = LayerMask.GetMask("Grappable");
+    }
+
+    private void OnValidate()
+    {
+        audioSource ??= GetComponent<AudioSource>();
     }
 
     public void Init(int id)
@@ -76,6 +81,7 @@ public class Grappler : MonoBehaviour
         var direction = (Vector3)rigidBody.position - firePoint.position;
         rigidBody.AddForce(direction*pulsePower*_chargePercent,ForceMode2D.Impulse);
         pulseCannonVFX.Play();
+        audioSource.PlayOneShot(pulseCannonBurstSfx);
         _chargePercent = 0;
         if(_id == 0) spaceshipMesh.material.SetFloat(BlueIntensity,_chargePercent);
         else if(_id == 1) spaceshipMesh.material.SetFloat(OrangeIntensity,_chargePercent);
@@ -93,6 +99,7 @@ public class Grappler : MonoBehaviour
         hook.LaunchHook(hit.point);
         GrappleVFX(true);
         yield return new WaitUntil(() => hook.IsGrappled);
+        HookVFX();
         distanceJoint2D.enabled = true;
         distanceJoint2D.connectedAnchor = hook.GrappleTargetPoint;
         var distance = Vector3.Distance(transform.position, hook.GrappleTargetPoint);
@@ -112,8 +119,7 @@ public class Grappler : MonoBehaviour
         if (state)
         {
             grappleGunVFX.Play();
-            grappleGunConsistentVFX.gameObject.SetActive(true);
-            hook.GrappleVFX(true);
+            audioSource.PlayOneShot(grappleGunFireSfx);
             if(_id == 0) spaceshipMesh.material.SetFloat(BlueIntensity,1);
             else if(_id == 1) spaceshipMesh.material.SetFloat(OrangeIntensity,1);
         }
@@ -124,6 +130,12 @@ public class Grappler : MonoBehaviour
             if(_id == 0) spaceshipMesh.material.SetFloat(BlueIntensity,0);
             else if(_id == 1) spaceshipMesh.material.SetFloat(OrangeIntensity,0);
         }
+    }
+
+    private void HookVFX()
+    {
+        hook.GrappleVFX(true);
+        grappleGunConsistentVFX.gameObject.SetActive(true);
     }
     private void OnDrawGizmos()
     {

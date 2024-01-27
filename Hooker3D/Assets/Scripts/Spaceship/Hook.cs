@@ -11,7 +11,6 @@ public class Hook : MonoBehaviour
     [Header("VFX")] 
     [SerializeField] private ParticleSystem grappleVFX;
     [Header("SFX")]
-    [SerializeField] private AudioClip grappleShotSfx;
     [SerializeField] private AudioClip grappleHitSfx;
 
     [Header("Hook")]
@@ -33,6 +32,11 @@ public class Hook : MonoBehaviour
     {
         lineRenderer.enabled = false;
         _grappler ??= GetComponentInParent<Grappler>();
+    }
+
+    private void OnValidate()
+    {
+        audioSource ??= GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -77,5 +81,6 @@ public class Hook : MonoBehaviour
     public void GrappleVFX(bool state)
     {
         grappleVFX.gameObject.SetActive(state);
+        if (state) audioSource.PlayOneShot(grappleHitSfx);
     }
 }
