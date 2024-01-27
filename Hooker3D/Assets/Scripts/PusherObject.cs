@@ -12,20 +12,16 @@ public class PusherObject : MonoBehaviour
     [SerializeField] float _directionMultiplier;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-            Debug.Log("Ball?");
         if (collision != null)
         {
             _ballRB = collision.gameObject.GetComponent<Rigidbody2D>();
-            Debug.Log("Ball");
             _isPushed = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-            Debug.Log("NoBall?");
         if (collision != null)
         {
-            Debug.Log("NoBall");
             _isPushed = false;
         }
     }
