@@ -65,6 +65,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal_02 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 337112388258468272, guid: 681e6f317b53d5f43869b69e5cfeb0a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6518457248803205644, guid: 681e6f317b53d5f43869b69e5cfeb0a3,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -125,6 +130,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 233.509
       objectReference: {fileID: 0}
+    - target: {fileID: 6800031707742186749, guid: 681e6f317b53d5f43869b69e5cfeb0a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -148,6 +158,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crystals (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 683554138627431589, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3511507745611618503, guid: fd2b8fdca524c36458f6301a93af8dfa,
         type: 3}
@@ -209,6 +224,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -224.595
       objectReference: {fileID: 0}
+    - target: {fileID: 3551643181032297333, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673670159468899368, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6551730361099470282, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844428610985697073, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207451845575447706, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -232,6 +272,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crystal_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 337112388258468272, guid: 25bfa0f19578b84499c7e3689247c8b4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130908476285279820, guid: 25bfa0f19578b84499c7e3689247c8b4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6518457248803205644, guid: 25bfa0f19578b84499c7e3689247c8b4,
         type: 3}
@@ -317,6 +367,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 337112388258468272, guid: 25bfa0f19578b84499c7e3689247c8b4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130908476285279820, guid: 25bfa0f19578b84499c7e3689247c8b4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6518457248803205644, guid: 25bfa0f19578b84499c7e3689247c8b4,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -400,6 +460,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crystal_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962176687864852599, guid: 414cabceb75e41547b0345e016d15f8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5766893570214175153, guid: 414cabceb75e41547b0345e016d15f8c,
         type: 3}
@@ -678,6 +743,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystals (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 683554138627431589, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3511507745611618503, guid: fd2b8fdca524c36458f6301a93af8dfa,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -738,6 +808,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 205.027
       objectReference: {fileID: 0}
+    - target: {fileID: 3551643181032297333, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673670159468899368, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6551730361099470282, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844428610985697073, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207451845575447706, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -771,6 +866,16 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startSizeY.scalar
       value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645074273991441625, guid: d4679cc1115fd904db46ac894cd2d003,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645074273991441625, guid: d4679cc1115fd904db46ac894cd2d003,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7677357155820608508, guid: d4679cc1115fd904db46ac894cd2d003,
         type: 3}
@@ -851,6 +956,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal_02 1
       objectReference: {fileID: 0}
+    - target: {fileID: 337112388258468272, guid: 681e6f317b53d5f43869b69e5cfeb0a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6518457248803205644, guid: 681e6f317b53d5f43869b69e5cfeb0a3,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -911,6 +1021,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 142.474
       objectReference: {fileID: 0}
+    - target: {fileID: 6800031707742186749, guid: 681e6f317b53d5f43869b69e5cfeb0a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -934,6 +1049,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crystals (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 683554138627431589, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3511507745611618503, guid: fd2b8fdca524c36458f6301a93af8dfa,
         type: 3}
@@ -995,6 +1115,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -305.637
       objectReference: {fileID: 0}
+    - target: {fileID: 3551643181032297333, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673670159468899368, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6551730361099470282, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844428610985697073, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207451845575447706, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1018,6 +1163,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crystals (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 683554138627431589, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3511507745611618503, guid: fd2b8fdca524c36458f6301a93af8dfa,
         type: 3}
@@ -1079,6 +1229,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -305.637
       objectReference: {fileID: 0}
+    - target: {fileID: 3551643181032297333, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673670159468899368, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6551730361099470282, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844428610985697073, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207451845575447706, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1102,6 +1277,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crystals
+      objectReference: {fileID: 0}
+    - target: {fileID: 683554138627431589, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3511507745611618503, guid: fd2b8fdca524c36458f6301a93af8dfa,
         type: 3}
@@ -1163,6 +1343,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 205.027
       objectReference: {fileID: 0}
+    - target: {fileID: 3551643181032297333, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673670159468899368, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6551730361099470282, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844428610985697073, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207451845575447706, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1186,6 +1391,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crystal_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962176687864852599, guid: 414cabceb75e41547b0345e016d15f8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5766893570214175153, guid: 414cabceb75e41547b0345e016d15f8c,
         type: 3}
@@ -1271,6 +1481,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3962176687864852599, guid: 414cabceb75e41547b0345e016d15f8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5766893570214175153, guid: 414cabceb75e41547b0345e016d15f8c,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1355,6 +1570,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal_02 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 337112388258468272, guid: 681e6f317b53d5f43869b69e5cfeb0a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6518457248803205644, guid: 681e6f317b53d5f43869b69e5cfeb0a3,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1415,6 +1635,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 142.474
       objectReference: {fileID: 0}
+    - target: {fileID: 6800031707742186749, guid: 681e6f317b53d5f43869b69e5cfeb0a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1438,6 +1663,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crystals (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 683554138627431589, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3511507745611618503, guid: fd2b8fdca524c36458f6301a93af8dfa,
         type: 3}
@@ -1499,6 +1729,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -332.11
       objectReference: {fileID: 0}
+    - target: {fileID: 3551643181032297333, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673670159468899368, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6551730361099470282, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844428610985697073, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207451845575447706, guid: fd2b8fdca524c36458f6301a93af8dfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1522,6 +1777,16 @@ PrefabInstance:
         type: 3}
       propertyPath: ShapeModule.m_Scale.x
       value: 19.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2443210329781040645, guid: e6759641dda0304469147720978ef7f2,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2443210329781040645, guid: e6759641dda0304469147720978ef7f2,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5700519095113028748, guid: e6759641dda0304469147720978ef7f2,
         type: 3}
@@ -1601,6 +1866,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crystal_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962176687864852599, guid: 414cabceb75e41547b0345e016d15f8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5766893570214175153, guid: 414cabceb75e41547b0345e016d15f8c,
         type: 3}
@@ -1685,6 +1955,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crystal_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962176687864852599, guid: 414cabceb75e41547b0345e016d15f8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5766893570214175153, guid: 414cabceb75e41547b0345e016d15f8c,
         type: 3}

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoSingleton<SoundManager>
 {
@@ -24,4 +25,6 @@ public class SoundManager : MonoSingleton<SoundManager>
     {
         audioMixer.SetFloat("Volume", value);
     }
+
+    
 }
