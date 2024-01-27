@@ -327,6 +327,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   lineRenderer: {fileID: 7774439866548998454}
+  audioSource: {fileID: 0}
+  grappleVFX: {fileID: 0}
+  grappleShotSfx: {fileID: 0}
+  grappleHitSfx: {fileID: 0}
   hookSpeed: 4
 --- !u!120 &7774439866548998454
 LineRenderer:
@@ -495,14 +499,18 @@ MonoBehaviour:
   distanceJoint2D: {fileID: 2052410015166685711}
   firePoint: {fileID: 5945136881268913515}
   hook: {fileID: 4236360320358174880}
+  audioSource: {fileID: 0}
   pulseCannonVFX: {fileID: 1304719469099778115}
   grappleGunVFX: {fileID: 7636023860228376924}
+  grappleGunConsistentVFX: {fileID: 0}
   spaceshipMesh: {fileID: 0}
+  pulseCannonBurstSfx: {fileID: 0}
+  pulseCannonChargeSfx: {fileID: 0}
   grappleDistance: 24
   grapplePullDistance: 2.5
   grappleTime: 0.2
-  chargingSpeed: 1
-  pulsePower: 100
+  chargingSpeed: 0.5
+  pulsePower: 75
 --- !u!50 &1079983202179173807
 Rigidbody2D:
   serializedVersion: 4

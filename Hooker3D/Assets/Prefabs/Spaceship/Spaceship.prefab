@@ -10017,11 +10017,6 @@ PrefabInstance:
       objectReference: {fileID: 4005937874054766129}
     - target: {fileID: 4676872508075883465, guid: beff3a5698a6d1641b794cad0ffbc3d8,
         type: 3}
-      propertyPath: pulsePower
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4676872508075883465, guid: beff3a5698a6d1641b794cad0ffbc3d8,
-        type: 3}
       propertyPath: spaceshipMesh
       value: 
       objectReference: {fileID: 7526584111317787498}
@@ -10376,11 +10371,6 @@ PrefabInstance:
       propertyPath: rigidBody
       value: 
       objectReference: {fileID: 4005937874054766129}
-    - target: {fileID: 8518223475874521503, guid: 3fb1368616e34fe4b8b8f552719ae8b5,
-        type: 3}
-      propertyPath: pulsePower
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 8518223475874521503, guid: 3fb1368616e34fe4b8b8f552719ae8b5,
         type: 3}
       propertyPath: grappleGunVFX
