@@ -13,10 +13,15 @@ public class Grappler : MonoBehaviour
     [SerializeField] private DistanceJoint2D distanceJoint2D;
     [SerializeField] private Transform firePoint;
     [SerializeField] private Hook hook;
+    [SerializeField] private AudioSource audioSource;
     [Header("VFX")]
     [SerializeField] private ParticleSystem pulseCannonVFX;
     [SerializeField] private ParticleSystem grappleGunVFX;
+    [SerializeField] private ParticleSystem grappleGunConsistentVFX;
     [SerializeField] private MeshRenderer spaceshipMesh;
+    [Header("SFX")] 
+    [SerializeField] private AudioClip pulseCannonBurstSfx;
+    [SerializeField] private AudioClip pulseCannonChargeSfx;
     [Header("Grapple Gun")]
     [SerializeField] private float grappleDistance;
     [SerializeField] private float grapplePullDistance;
@@ -104,11 +109,13 @@ public class Grappler : MonoBehaviour
         if (state)
         {
             grappleGunVFX.Play();
+            grappleGunConsistentVFX.gameObject.SetActive(true);
             if(_id == 0) spaceshipMesh.material.SetFloat(BlueIntensity,1);
             else if(_id == 1) spaceshipMesh.material.SetFloat(OrangeIntensity,1);
         }
         else
         {
+            grappleGunConsistentVFX.gameObject.SetActive(false);
             if(_id == 0) spaceshipMesh.material.SetFloat(BlueIntensity,0);
             else if(_id == 1) spaceshipMesh.material.SetFloat(OrangeIntensity,0);
         }

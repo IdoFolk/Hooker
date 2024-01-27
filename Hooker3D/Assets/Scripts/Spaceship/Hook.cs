@@ -7,6 +7,12 @@ public class Hook : MonoBehaviour
 {
     [SerializeField] private AnimationCurve animationCurve;
     [SerializeField] private LineRenderer lineRenderer;
+    [SerializeField] private AudioSource audioSource;
+    [Header("SFX")]
+    [SerializeField] private AudioClip grappleShotSfx;
+    [SerializeField] private AudioClip grappleHitSfx;
+
+    [Header("Hook")]
     [SerializeField] private float hookSpeed;
     private Vector3 _grappleTargetPoint;
     private Vector3 _grappleSelfPoint;
