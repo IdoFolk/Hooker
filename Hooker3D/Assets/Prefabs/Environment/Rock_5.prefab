@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 913767429626007021}
   - component: {fileID: 1285950086858866742}
   m_Layer: 9
-  m_Name: Rock_1
+  m_Name: Rock_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1209680551017296972}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.31, y: 3.78, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209680551017296972}
-  m_Mesh: {fileID: 6084873184135829403, guid: a789796992dfcd843b9e9d58da1d68b6, type: 3}
+  m_Mesh: {fileID: -4182407790977974390, guid: 54fe50efc98091c4d881a35c3501ad83, type: 3}
 --- !u!23 &913767429626007021
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -128,14 +128,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.39183962, y: 2.694989}
-      - {x: -0.42054418, y: 2.6802864}
-      - {x: -0.5904777, y: 2.3914206}
-      - {x: -0.86535233, y: 0.8670051}
-      - {x: -0.50003755, y: -0.001002878}
-      - {x: 0.43259192, y: 0.115591526}
-      - {x: 0.70560104, y: 0.4737119}
-      - {x: 1.0017456, y: 0.86473995}
-      - {x: 0.96879566, y: 1.2604642}
-      - {x: 0.7464098, y: 2.0164337}
+    - - {x: 0.60682434, y: 1.0402257}
+      - {x: 0.12007097, y: 1.0404412}
+      - {x: -0.0015246132, y: 1.0394864}
+      - {x: -0.0027874918, y: 0.8768325}
+      - {x: -0.30354813, y: 0.87893337}
+      - {x: -0.5510673, y: 0.764205}
+      - {x: -0.52172136, y: 0.5926932}
+      - {x: -0.52241766, y: 0.07020295}
+      - {x: -0.52292466, y: -0.25154826}
+      - {x: 0.60972404, y: -0.24955465}
+      - {x: 0.6495142, y: 0.87884426}
   m_UseDelaunayMesh: 0
