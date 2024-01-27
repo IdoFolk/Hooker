@@ -1,10 +1,12 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
     static CheckPoint _lastcheckPoint;
     public Transform SpawnPoint;
+    bool _hasBeenActivated = false;
     [SerializeField] private GameObject _wall;
     [SerializeField] private List<ParticleSystem> _activateParticles;
     [SerializeField] private List<ParticleSystem> _idleParticles;
@@ -24,13 +26,17 @@ public class CheckPoint : MonoBehaviour
         if (collision != null)
         {
             _lastcheckPoint = this;
-            var spaceship = collision.gameObject.GetComponent<Spaceship>();
-            if (spaceship)
+            if (!_hasBeenActivated)
             {
-                var spaceshipParticles = spaceship.BallCheckpointParticles;
-                if (spaceshipParticles)
+                var spaceship = collision.gameObject.GetComponent<Spaceship>();
+                if (spaceship)
                 {
-                    spaceshipParticles.Play();
+                    var spaceshipParticles = spaceship.BallCheckpointParticles;
+                    if (spaceshipParticles)
+                    {
+                        spaceshipParticles.Play();
+                        _hasBeenActivated = true;
+                    }
                 }
             }
 
@@ -53,5 +59,9 @@ public class CheckPoint : MonoBehaviour
     public static void SpawnAtLastSpawnPoint(GameObject ball)
     {
         ball.transform.position = _lastcheckPoint.SpawnPoint.position;
+        var spaceship = ball.GetComponent<Spaceship>();
+        spaceship.Player1GrappleGun.DisableGrapple();
+        spaceship.Player2GrappleGun.DisableGrapple();
+        _lastcheckPoint._hasBeenActivated = false;
     }
 }

@@ -7,6 +7,14 @@ public class Hook : MonoBehaviour
 {
     [SerializeField] private AnimationCurve animationCurve;
     [SerializeField] private LineRenderer lineRenderer;
+    [SerializeField] private AudioSource audioSource;
+    [Header("VFX")] 
+    [SerializeField] private ParticleSystem grappleVFX;
+    [Header("SFX")]
+    [SerializeField] private AudioClip grappleShotSfx;
+    [SerializeField] private AudioClip grappleHitSfx;
+
+    [Header("Hook")]
     [SerializeField] private float hookSpeed;
     private Vector3 _grappleTargetPoint;
     private Vector3 _grappleSelfPoint;
@@ -64,5 +72,10 @@ public class Hook : MonoBehaviour
         _isGrappled = false;
         transform.position = returnPoint;
         lineRenderer.enabled = false;
+    }
+
+    public void GrappleVFX(bool state)
+    {
+        grappleVFX.gameObject.SetActive(state);
     }
 }

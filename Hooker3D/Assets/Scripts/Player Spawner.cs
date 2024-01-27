@@ -14,7 +14,7 @@ public class PlayerSpawner : MonoBehaviour
         {
             _startingCheckPoint.OverridePlayerCheckpoint(_startingCheckPoint);
             CheckPoint.SpawnAtLastSpawnPoint(_player);
-            _player.transform.rotation = Quaternion.Euler(0, 0, 45);
+            _player.transform.rotation = Quaternion.Euler(0, 0, -45);
         }
     }
 }

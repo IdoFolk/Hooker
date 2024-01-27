@@ -17,6 +17,9 @@ public class Spaceship : MonoBehaviour
     private bool _shootPressedPlayer1;
     private bool _shootPressedPlayer2;
 
+    public Grappler Player1GrappleGun { get => player1GrappleGun;}
+    public Grappler Player2GrappleGun { get => player2GrappleGun;}
+
     private void OnValidate()
     {
         _rigidbody2D ??= GetComponent<Rigidbody2D>();
