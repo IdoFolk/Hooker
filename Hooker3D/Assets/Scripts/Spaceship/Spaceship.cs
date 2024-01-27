@@ -12,6 +12,10 @@ public class Spaceship : MonoBehaviour
     [SerializeField] private bool useXboxControllers;
     [SerializeField] private float angularDrag;
     [SerializeField] public ParticleSystem BallCheckpointParticles;
+    [SerializeField] public AudioSource audioSource;
+    [Header("SFX Clips")] 
+    [SerializeField] private AudioClip deathSFX;
+    [SerializeField] private AudioClip winSFX;
 
     private bool _grapplePressedPlayer1;
     private bool _grapplePressedPlayer2;
@@ -31,13 +35,6 @@ public class Spaceship : MonoBehaviour
         _rigidbody2D.angularDrag = angularDrag;
         player1GrappleGun.Init(0);
         player2GrappleGun.Init(1);
-    }
-
-    private void Update()
-    {
-        
-        //GrappleInput();
-        //CannonInput();
     }
 
     public void OnGrapple(int playerIndex, bool pressed)
@@ -67,6 +64,10 @@ public class Spaceship : MonoBehaviour
         }
     }
 
+    public void DeathSFX()
+    {
+        audioSource.PlayOneShot(deathSFX);
+    }
     private void CannonInput()
     {
         if (!useXboxControllers)
