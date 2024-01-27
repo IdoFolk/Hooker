@@ -63,7 +63,10 @@ public class Spaceship : MonoBehaviour
             else if(playerIndex == 1) player2GrappleGun.ReleaseShot();
         }
     }
-
+    public void WinSFX()
+    {
+        audioSource.PlayOneShot(winSFX);
+    }
     public void DeathSFX()
     {
         audioSource.PlayOneShot(deathSFX);

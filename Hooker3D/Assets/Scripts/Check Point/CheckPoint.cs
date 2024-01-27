@@ -60,14 +60,11 @@ public class CheckPoint : MonoBehaviour
     }
     public static void SpawnAtLastSpawnPoint(GameObject ball)
     {
-        ball.transform.position = _lastcheckPoint.SpawnPoint.position;
         var spaceship = ball.GetComponent<Spaceship>();
         spaceship.Player1GrappleGun.DisableGrapple();
         spaceship.Player2GrappleGun.DisableGrapple();
         _lastcheckPoint._hasBeenActivated = false;
-        var rigidbody2D = ball.GetComponent<Rigidbody2D>();
-        //Debug.Log("Poof");
-        rigidbody2D.AddForce(new Vector2(-20f,0),ForceMode2D.Impulse);
-        //ball.GetComponent<Rigidbody2D>().angularVelocity = 0;
+        var currentSpaceship = PlayerSpawner.Instance.SpawnPlayer(_lastcheckPoint.SpawnPoint.position);
+        PlayerInputHandler.AssignSpaceship(currentSpaceship);
     }
 }

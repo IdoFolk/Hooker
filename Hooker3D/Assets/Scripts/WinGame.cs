@@ -13,6 +13,7 @@ public class WinGame : MonoBehaviour
         {
             var spaceship = collision.GetComponent<Spaceship>();
             _spaceship = spaceship.gameObject;
+            spaceship.WinSFX();
             spaceship.enabled = false;
             _moveIntoHole = true;
             _spaceship.GetComponent<Rigidbody2D>().gravityScale = 0;

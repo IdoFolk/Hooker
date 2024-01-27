@@ -9,9 +9,7 @@ public class Grappler : MonoBehaviour
     public bool IsGrappled => hook.IsGrappled;
     public Transform FirePoint => firePoint;
     public bool IsCharging => _isCharging;
-    public PlayerInput PlayerInput => playerInput;
     
-    [SerializeField] private PlayerInput playerInput;
     [SerializeField] private Rigidbody2D rigidBody;
     [SerializeField] private DistanceJoint2D distanceJoint2D;
     [SerializeField] private Transform firePoint;

@@ -16,36 +16,22 @@ public class InputManager : MonoBehaviour
     
     private void OnDeviceChange(PlayerInput playerInput)
     {
-        foreach (var input in _playerInputs)
-        {
-            if(input == playerInput) return;
-        }
-        if (_playerInputs.Count > 1)
-        {
-            var amount = _playerInputs.Count;
-            for (int i = 0; i < amount; i++)
-            {
-                var input = _playerInputs[i];
-                _playerInputs.Remove(input);
-                input.gameObject.SetActive(false);
-            }
-        }
         _playerInputs.Add(playerInput);
         
-        var gamepad = playerInput.GetDevice<Gamepad>();
-        var keyboard = playerInput.GetDevice<Keyboard>();
-        var mouse = playerInput.GetDevice<Mouse>();
-        if (gamepad is not null)
-        {
-            playerInput.SwitchCurrentControlScheme("XboxControls");
-        }
-        else if (keyboard is not null)
-        {
-            playerInput.SwitchCurrentControlScheme("Keyboard");
-        }
-        else if (mouse is not null)
-        {
-            playerInput.SwitchCurrentControlScheme("Mouse");
-        }
+        // var gamepad = playerInput.GetDevice<Gamepad>();
+        // var keyboard = playerInput.GetDevice<Keyboard>();
+        // var mouse = playerInput.GetDevice<Mouse>();
+        // if (gamepad is not null)
+        // {
+        //     playerInput.SwitchCurrentControlScheme("XboxControls");
+        // }
+        // else if (keyboard is not null)
+        // {
+        //     playerInput.SwitchCurrentControlScheme("Keyboard");
+        // }
+        // else if (mouse is not null)
+        // {
+        //     playerInput.SwitchCurrentControlScheme("Mouse");
+        // }
     }
 }

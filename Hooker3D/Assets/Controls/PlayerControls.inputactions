@@ -27,66 +27,66 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "538bc8a4-0a9d-4908-8c09-99c526f6a1f3",
+                    "id": "063a35fd-74eb-40be-89be-48d200e04dba",
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "XboxControls",
+                    "groups": "",
                     "action": "Grapple",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "1528328b-d33a-4941-980f-16427c2c8121",
+                    "id": "c86d2d5a-6295-43c6-a15a-ac07dd2d3b82",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Mouse",
+                    "groups": "",
                     "action": "Grapple",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "28a04822-985f-48bb-94b6-ea7c4e9a681f",
+                    "id": "dd8b445e-d709-499b-bbdc-17d6818cd98c",
                     "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
+                    "groups": "",
                     "action": "Grapple",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "3092b074-363d-4efb-a32f-1bb89b847c34",
+                    "id": "834fdf45-3a8b-491a-a5ae-a3e9a473e8a6",
                     "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "XboxControls",
+                    "groups": "",
                     "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "3bfd806d-d380-4b42-8a40-2f900596ae54",
+                    "id": "dc7f0d43-8ae8-4155-8c84-eb7963d5fe0f",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Mouse",
+                    "groups": "",
                     "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "0783d1e6-00ae-4877-9fec-dba996cd7847",
+                    "id": "5e2955ca-33be-4019-aa95-82c900fcfd53",
                     "path": "<Keyboard>/z",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
+                    "groups": "",
                     "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -94,39 +94,5 @@
             ]
         }
     ],
-    "controlSchemes": [
-        {
-            "name": "XboxControls",
-            "bindingGroup": "XboxControls",
-            "devices": [
-                {
-                    "devicePath": "<Gamepad>",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        },
-        {
-            "name": "Mouse",
-            "bindingGroup": "Mouse",
-            "devices": [
-                {
-                    "devicePath": "<Mouse>",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        },
-        {
-            "name": "Keyboard",
-            "bindingGroup": "Keyboard",
-            "devices": [
-                {
-                    "devicePath": "<Keyboard>",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        }
-    ]
+    "controlSchemes": []
 }

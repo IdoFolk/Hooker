@@ -9914,6 +9914,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grapling_EffectBlue
       objectReference: {fileID: 0}
+    - target: {fileID: 9172981143288510377, guid: c88d78903604b9d4696dbd984f474c9f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10204,6 +10209,11 @@ PrefabInstance:
       propertyPath: rigidBody
       value: 
       objectReference: {fileID: 4005937874054766129}
+    - target: {fileID: 4676872508075883465, guid: beff3a5698a6d1641b794cad0ffbc3d8,
+        type: 3}
+      propertyPath: pulsePower
+      value: 125
+      objectReference: {fileID: 0}
     - target: {fileID: 4676872508075883465, guid: beff3a5698a6d1641b794cad0ffbc3d8,
         type: 3}
       propertyPath: audioSource
@@ -10967,6 +10977,11 @@ PrefabInstance:
       propertyPath: rigidBody
       value: 
       objectReference: {fileID: 4005937874054766129}
+    - target: {fileID: 8518223475874521503, guid: 3fb1368616e34fe4b8b8f552719ae8b5,
+        type: 3}
+      propertyPath: pulsePower
+      value: 125
+      objectReference: {fileID: 0}
     - target: {fileID: 8518223475874521503, guid: 3fb1368616e34fe4b8b8f552719ae8b5,
         type: 3}
       propertyPath: audioSource
