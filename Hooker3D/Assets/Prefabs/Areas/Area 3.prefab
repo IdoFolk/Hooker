@@ -1596,6 +1596,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal_02
       objectReference: {fileID: 0}
+    - target: {fileID: 3735048910191210297, guid: 25bfa0f19578b84499c7e3689247c8b4,
+        type: 3}
+      propertyPath: scalingMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6518457248803205644, guid: 25bfa0f19578b84499c7e3689247c8b4,
         type: 3}
       propertyPath: m_LocalScale.x
