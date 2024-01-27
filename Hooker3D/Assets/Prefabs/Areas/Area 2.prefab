@@ -310,6 +310,16 @@ PrefabInstance:
       propertyPath: ShapeModule.m_Scale.y
       value: 9.4
       objectReference: {fileID: 0}
+    - target: {fileID: 8599535951832071929, guid: 12c270d50b4e72b45955bcec5dcda633,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8599535951832071929, guid: 12c270d50b4e72b45955bcec5dcda633,
+        type: 3}
+      propertyPath: InitialModule.startSizeY.scalar
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8796309049397996901, guid: 12c270d50b4e72b45955bcec5dcda633,
         type: 3}
       propertyPath: m_LocalPosition.x
