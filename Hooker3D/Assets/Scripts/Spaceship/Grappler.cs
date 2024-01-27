@@ -110,11 +110,13 @@ public class Grappler : MonoBehaviour
         {
             grappleGunVFX.Play();
             grappleGunConsistentVFX.gameObject.SetActive(true);
+            hook.GrappleVFX(true);
             if(_id == 0) spaceshipMesh.material.SetFloat(BlueIntensity,1);
             else if(_id == 1) spaceshipMesh.material.SetFloat(OrangeIntensity,1);
         }
         else
         {
+            hook.GrappleVFX(false);
             grappleGunConsistentVFX.gameObject.SetActive(false);
             if(_id == 0) spaceshipMesh.material.SetFloat(BlueIntensity,0);
             else if(_id == 1) spaceshipMesh.material.SetFloat(OrangeIntensity,0);
