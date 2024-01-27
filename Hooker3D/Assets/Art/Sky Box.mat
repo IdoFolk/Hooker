@@ -158,7 +158,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Height_of_Gradient: 1.3
+    - _Height_of_Gradient: 1.42
     - _ImageType: 0
     - _Layout: 0
     - _Mapping: 0
@@ -186,18 +186,20 @@ Material:
     - _SunSize: 0.28
     - _SunSizeConvergence: 1.64
     - _Surface: 0
+    - _Tile: 4.47
     - _WorkflowMode: 1
     - _ZWrite: 1
+    - _offset: -1.17
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Bottom_Color: {r: 0.18021615, g: 0.1171876, b: 0.4113207, a: 0}
+    - _Bottom_Color: {r: 0.14126362, g: 0.108757555, b: 0.24528301, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GroundColor: {r: 0.16487186, g: 0.70569324, b: 0.8962264, a: 1}
     - _SkyTint: {r: 0.038180865, g: 0.26646015, b: 0.6226415, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Tiling: {r: 2, g: 2, b: 0, a: 0}
+    - _Tiling: {r: 2, g: 1.91, b: 0, a: 0}
     - _Tint: {r: 1, g: 1, b: 1, a: 0.5}
     - _TintColor: {r: 0.27500895, g: 0.29247063, b: 0.5660378, a: 1}
-    - _Top_Color: {r: 0.05136165, g: 0.032004237, b: 0.10943389, a: 0}
+    - _Top_Color: {r: 0.1839943, g: 0.15540761, b: 0.2754717, a: 0}
   m_BuildTextureStacks: []

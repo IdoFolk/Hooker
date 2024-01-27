@@ -122,6 +122,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.03000021
       objectReference: {fileID: 0}
+    - target: {fileID: 2266814254073839676, guid: 859312477b1af8e469d9b71c102927ad,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045015459031708070, guid: 859312477b1af8e469d9b71c102927ad,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.08
+      objectReference: {fileID: 0}
     - target: {fileID: 6110156843396648017, guid: 859312477b1af8e469d9b71c102927ad,
         type: 3}
       propertyPath: m_Name
@@ -131,6 +141,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272051110128054884, guid: 859312477b1af8e469d9b71c102927ad,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566139607532185274, guid: 859312477b1af8e469d9b71c102927ad,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.27
       objectReference: {fileID: 0}
     - target: {fileID: 8985763911808626416, guid: 859312477b1af8e469d9b71c102927ad,
         type: 3}
@@ -1575,6 +1595,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crystal_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3735048910191210297, guid: 25bfa0f19578b84499c7e3689247c8b4,
+        type: 3}
+      propertyPath: scalingMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6518457248803205644, guid: 25bfa0f19578b84499c7e3689247c8b4,
         type: 3}

@@ -10,6 +10,7 @@ public class CheckPoint : MonoBehaviour
     [SerializeField] private GameObject _wall;
     [SerializeField] private List<ParticleSystem> _activateParticles;
     [SerializeField] private List<ParticleSystem> _idleParticles;
+    [SerializeField] private AudioSource audioSource;
     private void Start()
     {
         foreach (var particle in _idleParticles)
@@ -35,6 +36,7 @@ public class CheckPoint : MonoBehaviour
                     if (spaceshipParticles)
                     {
                         spaceshipParticles.Play();
+                        audioSource.Play();
                         _hasBeenActivated = true;
                     }
                 }
